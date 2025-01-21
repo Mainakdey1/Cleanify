@@ -12,22 +12,22 @@ class WelcomeWindow(QMainWindow):
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)  # Removes the title bar
 
 
-        # Add dragging functionality
+
         self.old_pos = None
         self.setMouseTracking(True)
 
-        # Window Configuration
+
         self.setWindowTitle("Welcome")
         self.setFixedSize(600, 400)
 
-        # Create the main widget
+
         self.central_widget = QWidget()
         self.setCentralWidget(self.central_widget)
 
-        # Set the gradient background
+
         self.set_gradient_background()
 
-        # Add UI components
+
         self.setup_ui()
 
 
@@ -62,7 +62,7 @@ class WelcomeWindow(QMainWindow):
         layout.setSpacing(20)
         layout.setAlignment(Qt.AlignmentFlag.AlignCenter)
 
-# Add Title Label
+
         title_label = QLabel("Desktop organizer", self)
         title_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         title_label.setStyleSheet("""
@@ -72,7 +72,7 @@ class WelcomeWindow(QMainWindow):
         """)
         layout.addWidget(title_label)
 
-        # Add Description Label
+
         description_label = QLabel("Your little helper. Let’s get started!", self)
         description_label.setAlignment(Qt.AlignmentFlag.AlignCenter)
         description_label.setStyleSheet("""
@@ -81,7 +81,7 @@ class WelcomeWindow(QMainWindow):
         """)
         layout.addWidget(description_label)
 
-        # Add Start Button
+
         self.start_button = QPushButton("Start", self)
         self.start_button.setStyleSheet("""
             QPushButton {
@@ -103,7 +103,7 @@ class WelcomeWindow(QMainWindow):
     def on_start_clicked(self):
         print("Start button clicked!")
 
-        # Hide the Start button
+
         self.start_button.setVisible(False)
         window.close()
 

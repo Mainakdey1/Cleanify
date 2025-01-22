@@ -6,6 +6,6 @@ Prerequisites:
 1. python 3.11 should be installed on your system. Please check if it is install by running the following command on a command line interface:
    #checking python installation:
    
-   '''bash
+   ```bash
    python --version
-   '''
+   ```

@@ -1,6 +1,6 @@
 from PyQt6.QtWidgets import QApplication, QMainWindow, QLabel, QLineEdit, QPushButton, QVBoxLayout, QWidget, QMessageBox
 from PyQt6.QtGui import QPixmap, QColor, QPalette, QLinearGradient, QBrush, QFont
-from PyQt6.QtCore import Qt
+from PyQt6.QtCore import Qt, QPropertyAnimation, pyqtProperty
 import sys
 import os
 import shutil
@@ -13,8 +13,6 @@ class WelcomeWindow(QMainWindow):
     def __init__(self ):
         super().__init__()
         self.setWindowFlag(Qt.WindowType.FramelessWindowHint)  
-
-
 
         self.old_pos = None
         self.setMouseTracking(True)
@@ -29,11 +27,47 @@ class WelcomeWindow(QMainWindow):
 
         self.set_gradient_background()
         self.setup_ui()
+        
+        self.setStyleSheet("""
+            QPushButton:hover {
+                background-color: lightblue;  /* Change button background on hover */
+            }
+        """)
 
-
-
+    def eventFilter(self, source, event):
+        if source == self.start_button:
+            if event.type().name == "Enter":  # Mouse enters button
+                print(1)
+                self.setStyleSheet("""
+            QPushButton {
+            background-color: #d9759d;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 10px;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #0f3460;
+            }
+        """)
+            elif event.type().name == "Leave":  # Mouse leaves button
+                print(2)
+                self.start_button.setStyleSheet("""
+            QPushButton {
+            background-color: #e94560;
+                color: white;
+                font-size: 16px;
+                font-weight: bold;
+                border-radius: 10px;
+                padding: 10px 20px;
+            }
+            QPushButton:hover {
+                background-color: #0f3460;
+            }
+        """)
+        return super().eventFilter(source, event)
     
-
 
     def mousePressEvent(self, event):
         if event.button() == Qt.MouseButton.LeftButton:
@@ -84,7 +118,7 @@ class WelcomeWindow(QMainWindow):
         self.start_button = QPushButton("Start", self)
         self.start_button.setStyleSheet("""
             QPushButton {
-                background-color: #e94560;
+            background-color: #e94560;
                 color: white;
                 font-size: 16px;
                 font-weight: bold;
@@ -98,6 +132,7 @@ class WelcomeWindow(QMainWindow):
         self.start_button.clicked.connect(self.on_start_clicked)
 
         layout.addWidget(self.start_button)
+        self.start_button.installEventFilter(self)
 
     def on_start_clicked(self):
         """Action when Start button is clicked."""

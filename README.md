@@ -22,7 +22,7 @@ Prerequisites:
 ---
 Upon successful installation, run cleanify. It should look something like this:
 <p align="center">
-![cleanify1](https://github.com/user-attachments/assets/39291f4d-005c-4690-8bbd-101b2dc42663)
+<img src="https://github.com/user-attachments/assets/39291f4d-005c-4690-8bbd-101b2dc42663">
 </p>
 
 

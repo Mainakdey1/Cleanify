@@ -1,5 +1,5 @@
 # DesktopReview-Cleaner
-The Desktop File Organizer, a Python script, automatically categorizes files on your desktop as important or junk, simplifying organization and enhancing productivity.
+The Desktop File Organizer, a Python app, automatically categorizes files on your desktop as important or junk, simplifying organization and enhancing productivity.
 The desktop file organizer is built using python 3.11 and pyqt6, structured on firebase's realtime database credential system coupled with hashicorp's vault key storage system, based on AWS KMS.
 
 ---

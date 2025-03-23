@@ -20,4 +20,15 @@ Prerequisites:
    ```
 
 ---
-In the future, this application will be available as a standalone package in .exe format. 
+Upon successful installation, run cleanify. It should look something like this:
+![cleanify1](https://github.com/user-attachments/assets/39291f4d-005c-4690-8bbd-101b2dc42663)
+
+Click on next and go to the login page. Create a new user profile for yourself on the following page:
+![cleanify2](https://github.com/user-attachments/assets/90f47e93-6ac6-4c99-8408-5069e40b2a27)
+
+Once you have created a profile, cleanigy will clean your desktop and organize your files. It will also provide a page with the current usage stats. Click on done, to generate the stats page.
+![cleanify3](https://github.com/user-attachments/assets/9ca8ddf6-0462-4752-a65a-4cd348c830b4)
+
+
+
+In the future, this application will be available as a standalone package in .exe format. Thanks for using Cleanify!

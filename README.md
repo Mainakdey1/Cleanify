@@ -28,12 +28,12 @@ Upon successful installation, run cleanify. It should look something like this:
 
 Click on next and go to the login page. Create a new user profile for yourself on the following page:
 <p align="center">
-![cleanify2](https://github.com/user-attachments/assets/90f47e93-6ac6-4c99-8408-5069e40b2a27)
+<img src="https://github.com/user-attachments/assets/90f47e93-6ac6-4c99-8408-5069e40b2a27">
 </p>
 
 Once you have created a profile, cleanigy will clean your desktop and organize your files. It will also provide a page with the current usage stats. Click on done, to generate the stats page.
 <p align="center">
-![cleanify3](https://github.com/user-attachments/assets/9ca8ddf6-0462-4752-a65a-4cd348c830b4)
+<img src="https://github.com/user-attachments/assets/9ca8ddf6-0462-4752-a65a-4cd348c830b4">
 </p>
 
 
